@@ -1,11 +1,13 @@
 <html>
-    <head>
-        <title>
-            <%= title %>
-        </title>
-    </head>
+  <head>
+    <title><%= title %></title>
+  </head>
 
-    <body>
-        <h1>Codeial / <%= title %></h1>
-    </body>
+  <body>
+    <%- include('_header'); %>
+
+    <h1>Codeial / <%= title %></h1>
+
+    <%- include('_footer'); %>
+  </body>
 </html>
