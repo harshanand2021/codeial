@@ -20,6 +20,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-router.get('/sign-out', usersController.destroySession);
+// router.get('/sign-out', usersController.destroySession);
 
 module.exports = User;
