@@ -4,10 +4,13 @@
 
    <section id="feed-posts">
     <h4>Posts</h4>
+    <% if(user){%>
     <form action="/posts/create" id="new-post-from" method="POST">
         <textarea name="content" cols="30" rows="3"></textarea>
         <input type="submit" value="Post">
     </form>
+
+    <%}%>
 
     <div id="posts-lists-container">
         <ul>
