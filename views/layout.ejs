@@ -1,12 +1,16 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta-deprecated/lib/noty.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta-deprecated/lib/noty.min.js"></script>
+    <link rel="stylesheet" href="/assets/scss/layout.scss">
     <%- style %>
   </head>
 
   <body>
     <%- include('_header'); %>
+
+    
 
     <main id="layout-main">
       <%- body %>
@@ -15,6 +19,19 @@
     <%- include('_footer'); %>
 
     <%- script %>
+
+    <script>
+      <% if(flash.success && flash.success.length > 0) {%>
+        new Noty({
+          theme: 'relax',
+          text: "<%= flash.success %>",
+          type: 'success',
+          layout: 'top right',
+          timeout: 1500
+
+        }).show();
+      <%}%>
+    </script>
 
   </body>
 </html>
